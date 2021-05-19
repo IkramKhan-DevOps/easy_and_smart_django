@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'ckeditor',
 
-    'src.lesson_2_advanced',
+    'learning.ch1_basic',
+    'learning.ch2_oop',
 ]
 
 MIDDLEWARE = [
@@ -54,8 +55,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
     {
@@ -81,7 +80,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
